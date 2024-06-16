@@ -1,5 +1,10 @@
 import Image from 'next/image'
 import { FaUserLock } from "react-icons/fa";
+import localFont from "next/font/local";
+
+const icomoonFont = localFont({
+    src: "../fonts/icomoon.ttf",
+  });
 
 type Props = {}
 
@@ -7,14 +12,12 @@ function ThermostatBeneficeTwo({}: Props) {
   return (
     <section className="py-20">
         <div className="container">
-            <div className="grid lg:grid-cols-2">
-                <h2 className="2xl:text-3xl font-bold mb-8 lg:text-2xl text-xl">Quelles sont les avantages des thermostats connectés ?</h2>
-            </div>
-            <div className="grid lg:grid-cols-2 lg:gap-x-32 lg:place-content-betwee, lg:place-items-center">
+            <div className="grid lg:grid-cols-2 lg:gap-x-32 gap-y-16 lg:gap-y-0">
                 <div className="flex flex-col gap-y-8">
+                    <h2 className="2xl:text-3xl font-bold text-2xl">Les avantages des thermostats connectés</h2>
                     <div className="flex gap-x-2">
-                        <div className="p-2">
-                            <FaUserLock className="h-8 w-8 text-liia-orange"/>
+                        <div>
+                            <div style={icomoonFont.style} className="text-liia-orange text-4xl">j</div>
                         </div>
                         <div>
                             <h3 className="!font-semibold mb-2 lg:text-xl text-lg">Des économies d'énergie significatives</h3>
@@ -22,8 +25,8 @@ function ThermostatBeneficeTwo({}: Props) {
                         </div>
                     </div>
                     <div className="flex gap-x-2">
-                        <div className="p-1">
-                            <FaUserLock className="h-8 w-8 text-liia-orange"/>
+                        <div>
+                            <div style={icomoonFont.style} className="text-liia-orange text-4xl">p</div>
                         </div>
                         <div>
                             <h3 className="!font-semibold mb-2 lg:text-xl text-lg">Un confort amélioré</h3>
@@ -31,8 +34,8 @@ function ThermostatBeneficeTwo({}: Props) {
                         </div>
                     </div>
                     <div className="flex gap-x-2">
-                        <div className="p-1">
-                            <FaUserLock className="h-8 w-8 text-liia-orange"/>
+                        <div>
+                            <div style={icomoonFont.style} className="text-liia-orange text-4xl">h</div>
                         </div>
                         <div>
                             <h3 className="!font-semibold mb-2 lg:text-xl text-lg">Le contrôle à distance</h3>
@@ -40,24 +43,22 @@ function ThermostatBeneficeTwo({}: Props) {
                         </div>
                     </div>
                     <div className="flex gap-x-2">
-                        <div className="p-1">
-                            <FaUserLock className="h-8 w-8 text-liia-orange"/>
+                        <div>
+                            <div style={icomoonFont.style} className="text-liia-orange text-4xl">n</div>
                         </div>
                         <div>
                             <h3 className="!font-semibold mb-2 lg:text-xl text-lg">Une installation sans travaux</h3>
-                            <p className="mb-0">L’installation est généralement réalisée en moins de 2 heures et elle est entièrement gratuite. Les thermostats connectés s'intègrent facilement dans votre logement sans travaux​​​​.</p>
+                            <p className="mb-0">L’installation est généralement réalisée en moins de 2 heures et entièrement gratuite. Les thermostats connectés s'intègrent facilement dans votre logement sans travaux​​​ lourds​.</p>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <Image
-                    src="/images/modeles-thermostats.png"
-                    alt="Installation de thermostat connectés gratuit"
-                    className="rounded-xl"
-                    width={450}
-                    height={450}
-                    />
-                </div>
+                <Image
+                src="/images/modeles-thermostats.png"
+                alt="Illustration des thermostats connectés gaz/fioul/pompe à chaleur et électrique"
+                className="rounded-xl place-self-end"
+                width={450}
+                height={450}
+                />
             </div>
         </div>
     </section>

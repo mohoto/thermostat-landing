@@ -1,4 +1,5 @@
 import Hero from "@/components/hero"
+import Formulaire from "@/components/formulaire";
 import ThermostatConnecte from "@/components/thermostatConnecte";
 import ThermostatBenefice from "@/components/thermostatBenefice";
 import PrimeEtat from "@/components/primeEtat";
@@ -12,8 +13,8 @@ export default function Home() {
   return (
     <main>
         <Hero />
+        <Formulaire />
         <ThermostatConnecte />
-        {/* <ThermostatBenefice /> */}
         <ThermostatBeneficeTwo />
         <PrimeEtat />
         <Etapes />

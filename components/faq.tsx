@@ -33,34 +33,33 @@ function Faq({}: Props) {
           </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="lg:text-lg"><h3 className="text-shikam-fonce">Pourquoi avoir un site web est-il important pour mon activité ?</h3></AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Suis-je éligible à la Prime Coup de Pouce Chauffage ?</AccordionTrigger>
               <AccordionContent className="text-base">
-                <p>Un site web, c'est comme une boutique ouverte tout le temps sur internet. Il permet de montrer ce que vous faites et de vendre vos produits ou services à plus de gens.</p>
+                <p>Oui, cette prime est ouverte à tous les foyers français, propriétaires ou locataires, sans condition de revenus. Pour vérifier votre éligibilité, remplissez simplement notre formulaire en ligne.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-1">
-              <AccordionTrigger className="lg:text-lg"><h3 className="text-shikam-fonce">Quel est le différence entre un site vitrine et un site e-comerce ?</h3></AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Quels types de chauffage sont compatibles avec les thermostats connectés ?</AccordionTrigger>
               <AccordionContent className="text-base">
-                <p>Un site web vitrine est principalement conçu pour présenter des informations sur une activité de services ou de prestations. Il sert souvent de carte de visite en ligne et vise à attirer les visiteurs en fournissant des détails sur ces activités.</p>
-                <p>En revanche, un site web e-commerce est spécifiquement conçu pour permettre la vente de produits en ligne. Il offre des fonctionnalités telles que la gestion de catalogue, le panier d'achat, ainsi que la gestion des commandes et des expéditions.</p>
+                <p>Les thermostats connectés peuvent être compatibles avec divers systèmes de chauffage, y compris les chaudières à gaz, les pompes à chaleur, et les radiateurs électriques. Il est important de vérifier la compatibilité du thermostat avec votre système de chauffage avant l'installation.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="lg:text-lg"><h3 className="text-shikam-fonce">Comment rendre mon site plus visible sur Google et Bing ?</h3></AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Que se passe-t-il après avoir rempli le formulaire d'inscription ?</AccordionTrigger>
               <AccordionContent className="text-base">
-              <p>Nous rendons votre site plus facile à trouver sur Google en utilisant des techniques de référencement naturel (SEO). Cela consiste à rédiger et créer du contenu en utilisant des mots-clés pertinents et faire en sorte que votre site soit mentionné par d'autres sites.</p>
+              <p>Après avoir rempli le formulaire, un membre de notre équipe vous contactera pour vérifier les informations fournies et planifier l'installation de votre thermostat connecté à une date qui vous convient.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="lg:text-lg"><h3 className="text-shikam-fonce">Comment fonctionnent les publicités sur les réseaux sociaux ?</h3></AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Comment se déroule l'installation du thermostat connecté ?</AccordionTrigger>
               <AccordionContent className="text-base">
-              <p>On crée des annonces sur les réseaux sociaux qui apparaissent aux personnes qui pourraient être intéressées par ce que vous offrez, en fonction de leur âge, où elles habitent, et ce qu'elles aiment.</p>
+              <p>Un technicien agréé se rendra à votre domicile pour installer le thermostat connecté. L'installation prend généralement moins de 2 heures et ne nécessite pas de travaux lourds. Elle est entièrement gratuite grâce à la Prime Coup de Pouce Chauffage.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="lg:text-lg"><h3 className="text-shikam-fonce">Combien de temps faut-il attendre pour voir les effets de ces actions ?</h3></AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Quelle est la durée de vie d'un thermostat connecté ?</AccordionTrigger>
               <AccordionContent className="text-base">
-              <p>Cela dépend. Pour que votre site apparaisse naturellement mieux sur Google, cela peut prendre quelques mois. Les publicités sur les réseaux sociaux, Google et Bing peuvent avoir des résultats plus rapides, mais il faut continuer à les ajuster pour réussir sur le long terme.</p>
+              <p>Un thermostat connecté a généralement une durée de vie de plusieurs années. La longévité peut varier en fonction de l'utilisation et de l'entretien de l'appareil.</p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

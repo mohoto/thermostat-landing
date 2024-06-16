@@ -22,7 +22,8 @@ const config = {
         "liia": {
           "bleue": "rgb(9, 54, 122)",
           "orange": "rgb(248, 157, 27)",
-          "clair": "#f3f4f8",
+          "clair2": "#f3f4f8",
+          "clair": "#f2f4f3",
           "light": "#f5f5f5",
         },
         border: "hsl(var(--border))",
