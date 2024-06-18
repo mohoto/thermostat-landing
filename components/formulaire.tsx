@@ -411,7 +411,7 @@ function Formulaire({}: Props) {
                                                                     htmlFor="chauffage-individuel"
                                                                     className="flex items-center gap-x-3 rounded-xl bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:bg-liia-orange [&:has([data-state=checked])]:border-liia-orange lg:text-lg peer-data-[state=checked]:text-white"
                                                                     >
-                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">F</div>
+                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">U</div>
                                                                         <span>Chauffage individuel</span>
                                                                     </Label>
                                                                 </div>
