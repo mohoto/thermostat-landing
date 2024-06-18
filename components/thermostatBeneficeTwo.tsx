@@ -53,7 +53,7 @@ function ThermostatBeneficeTwo({}: Props) {
                     </div>
                 </div>
                 <Image
-                src="/images/modeles-thermostats.png"
+                src="/images/modeles-thermostats-2.png"
                 alt="Illustration des thermostats connectés gaz/fioul/pompe à chaleur et électrique"
                 className="rounded-xl place-self-end"
                 width={450}

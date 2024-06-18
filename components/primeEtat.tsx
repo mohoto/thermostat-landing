@@ -15,8 +15,8 @@ function PrimeEtat({}: Props) {
                     <Image
                     src="/images/coup-de-pouce-thermostat-blanc-3.png"
                     alt="Programme de l'Etat Coup de Pouce thermostats connectés"
-                    width={380}
-                    height={380}
+                    width={330}
+                    height={330}
                     priority
                     />
                     {/* <h3 className="mt-4 text-liia-orange text-lg flex flex-col items-center">Prime valable<span className="font-bold">jusqu’au 31 décembre 2024</span></h3> */}

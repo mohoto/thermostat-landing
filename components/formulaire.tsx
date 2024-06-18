@@ -14,11 +14,11 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 // import { Switch } from "@/components/ui/switch"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Progress } from "@/components/ui/progress"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { set, useForm } from "react-hook-form"
 import { z } from "zod"
 import { cn } from '@/lib/utils'
+import {delay} from '@/lib/helpers'
 import localFont from "next/font/local";
 
 const icomoonFont = localFont({
@@ -44,7 +44,7 @@ function Formulaire({}: Props) {
 
     const [step, setStep] = useState<number>(1)
     const [progress, setProgress] = useState<number>(0)
-    const [progressSection, setProgressSection] = useState<boolean>(false)
+    console.log(progress)
     const [eligible, setEligible] = useState<boolean>(false)
     const [typeChauffage, setTypeChauffage] = useState<string>("")
     const [typeLogement, setTypeLogement] = useState<string>("")
@@ -85,10 +85,6 @@ function Formulaire({}: Props) {
         setModeghauffage(e.target.value)
     };
 
-    const handleNomChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setNom(e.target.value)
-    };
-
     const onSubmit = async (data: z.infer<typeof FormSchema>) => {
         const values = {
             typeChauffage: data.typeChauffage.toUpperCase(),
@@ -101,7 +97,7 @@ function Formulaire({}: Props) {
             telephone: data.telephone.toUpperCase(),
             date: new Date().toLocaleDateString()
         }
-        setStep(5)
+        setStep(5);
         if(data.modeChauffage === "chauffage individuel") {
             try {
                 const response = await fetch('/api/eligibilite', {
@@ -111,27 +107,25 @@ function Formulaire({}: Props) {
                     },
                     body: JSON.stringify(values)
                 })
-                setProgressSection(true);
-                const myTimeProgress = setTimeout(() => {
-                    setProgress(100);
-                }, 3000)
-                setTimeout(() => {
-                    clearTimeout(myTimeProgress)
-                    setProgressSection(false);
-                    setEligible(true);
-                }, 4000)
+                setEligible(true);
+                await delay(1500)
+                setStep(6)
             } catch (error) {
                 console.log(error)
             }
         }
-        else {}
+        else {
+            setEligible(false);
+            await delay(1500);
+            setStep(6);
+        }
     }
 
   return (
-    <section className="my-20">
+    <section className="my-20" id="test-eligibilite">
         <div className="lg:container">
             <div className="flex flex-col lg:flex-row">
-                <div className="bg-liia-bleue lg:w-2/3 p-6 rounded-tl-2xl rounded-bl-2xl rounded-tr-2xl rounded-br-2xl lg:rounded-tr-none lg:rounded-br-none">
+                <div className="bg-liia-bleue lg:w-2/3 p-6 rounded-tl-2xl rounded-bl-2xl rounded-tr-2xl rounded-br-2xl lg:rounded-tr-none lg:rounded-br-none min-h-[410px] lg:min-h-[380px]">
                     <h2 className="text-2xl text-white before:content-[''] before:w-28 before:h-2 before:bg-liia-orange before:-bottom-3 before:left-0 relative before:absolute before:rounded-sm">Testez votre éligibilité</h2>
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -417,7 +411,7 @@ function Formulaire({}: Props) {
                                                                     htmlFor="chauffage-individuel"
                                                                     className="flex items-center gap-x-3 rounded-xl bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:bg-liia-orange [&:has([data-state=checked])]:border-liia-orange lg:text-lg peer-data-[state=checked]:text-white"
                                                                     >
-                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">w</div>
+                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">X</div>
                                                                         <span>Chauffage individuel</span>
                                                                     </Label>
                                                                 </div>
@@ -436,7 +430,7 @@ function Formulaire({}: Props) {
                                                                     htmlFor="chauffage-colectif"
                                                                     className="flex items-center gap-x-3 rounded-xl bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:bg-liia-orange [&:has([data-state=checked])]:border-liia-orange lg:text-lg peer-data-[state=checked]:text-white"
                                                                     >
-                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">z</div>
+                                                                        <div style={icomoonFont.style} className="text-3xl border-r-2 border-gray-300 pr-2">E</div>
                                                                         <span>Chauffage collectif</span>
                                                                     </Label>
                                                                 </div>
@@ -546,26 +540,21 @@ function Formulaire({}: Props) {
                                     </div>
                                 </div>
                             )}
-                            {(step === 5 && eligible) && (
-                                <>
-                                {progressSection ? (
-                                    <>
-                                    <div className="lg:h-64 mt-6 grid place-items-center">
-                                        <Progress value={progress} className="w-2/3 h-10" />
+                            {step === 5 && (
+                                <div className="lg:h-64 mt-6 grid place-items-center">
+                                    <div role="status" className="flex items-center flex-col">
+                                        <svg className="animate-spin -ml-1 mr-3 h-16 w-16 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        <span className="text-white mt-4">En cours de traitement...</span>
                                     </div>
-                                    <div className="flex justify-end">
-                                        <button
-                                        className="bg-liia-orange text-white py-2 px-4 rounded-sm mt-4"
-                                        onClick={() => setStep(1)}
-                                        >
-                                            Fermer
-                                        </button>
-                                    </div>
-                                    </>
-                                ) : (
+                                </div>
+                            )}
+                            {(step === 6 && eligible) && (
                                 <div className="lg:h-64 mt-6 flex flex-col justify-between">
                                     <div className="p-4 text-center mt-8">
-                                        <h3 className="text-white text-2xl mb-10">Félicitation, vous êtes éligible à la prime <br /><span className="text-liia-orange">"COUP DE POUCHE CHAUFFAGE"</span></h3>
+                                        <h3 className="text-white lg:text-2xl mb-10 text-lg">Félicitation, vous êtes éligible à la prime <br /><span className="text-liia-orange text-2xl">"COUP DE POUCHE CHAUFFAGE"</span></h3>
                                         <p className="text-white">Un conseiller vous contactera dans les plus brefs délais pour finaliser votre dossier.</p>
                                     </div>
                                     <div className="flex justify-end">
@@ -577,14 +566,12 @@ function Formulaire({}: Props) {
                                         </button>
                                     </div>
                                 </div>
-                                )}
-                                </>
                             )}
-                            {(step === 5 && !eligible) && (
+                            {(step === 6 && !eligible) && (
                                 <div className="lg:h-64 mt-6 flex flex-col justify-between">
                                     <div className="p-4 text-center mt-8">
-                                        <h3 className="text-white text-2xl mb-10">Désolé, vous n'êtes éligible à la prime <br /><span className="text-liia-orange">"COUP DE POUCHE CHAUFFAGE"</span></h3>
-                                        <p className="text-white">Cette prime est disponible seulement pour les logements en chauffage individuel.</p>
+                                        <h3 className="text-white text-2xl mb-10">Désolé, vous n'êtes pas éligible à la prime <br /><span className="text-liia-orange">"COUP DE POUCHE CHAUFFAGE"</span></h3>
+                                        <p className="text-white">Cette prime est disponible uniquement pour les logements en chauffage individuel.</p>
                                     </div>
                                     <div className="flex justify-end">
                                         <button
@@ -601,7 +588,7 @@ function Formulaire({}: Props) {
                 </div>
                 <div className="lg:w-1/3 relative">
                     <Image
-                    src="/images/liia-energies-thermostat-connecte-questions.png"
+                    src="/images/liia-energies-thermostat-connecte-eligibilite-2.jpeg"
                     alt="Agence Shikam publicité sur les réseaux sociaux"
                     className="object-cover rounded-tr-2xl rounded-br-2xl"
                     fill

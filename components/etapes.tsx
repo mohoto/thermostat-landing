@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import localFont from "next/font/local";
 
 const icomoonFont = localFont({
@@ -45,13 +46,14 @@ function Etapes({}: Props) {
                         <p className="leading-relaxed mt-4">Un technicien se déplacera à votre domicile. Commencez à réaliser des économies sur vos factures de chauffage immédiatement.</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center mt-10">
-                    <p className="text-center">Profitez de cette prime maintenant</p>
-                    <button
+                <div className="flex flex-col items-center mt-20">
+                    <p className="text-center font-semibold bg-[#ffed00] py-1 px-2 rounded-lg">Profitez de cette prime avant le 31 décembre 2024</p>
+                    <Link
+                    href="#test-eligibilite"
                     className="bg-liia-orange text-white font-semibold py-2 px-4 rounded-sm mt-4"
                     >
                         Testez votre éligibilté
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

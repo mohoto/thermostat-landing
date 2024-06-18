@@ -11,17 +11,17 @@ type Props = {}
 
 function Faq({}: Props) {
   return (
-    <section className="my-20 container">
-      <div className="grid lg:grid-cols-2 lg:gap-x-32 lg:place-content-between">
+    <section className="my-12 container">
+      <div className="grid lg:grid-cols-2 lg:gap-x-20 lg:place-content-between gap-y-10 lg:gap-y-0">
         <div className="justify-self-start place-self-end">
           <Image
             src={faqImage}
             alt="Agence Shikam publicité sur les réseaux sociaux"
-            className="rounded-xl"
+            className="rounded-xl w-full lg:w-[75%]"
             width={800}
-            height={600}
+            height={800}
             style={{
-              maxWidth: '75%',
+              maxWidth: '100%',
               height: 'auto',
             }}
             priority
@@ -29,13 +29,13 @@ function Faq({}: Props) {
         </div>
         <div>
           <div className="flex flex-col mb-10 lg:gap-x-20">
-            <h2 className="2xl:text-3xl font-bold mb-4 lg:text-2xl text-xl">Questions fréquentes sur les thermostats connectés et l'aide de l'État</h2>
+            <h2 className="2xl:text-3xl font-bold text-2xl">Questions fréquentes sur la prime Coup de Pouce Chauffage</h2>
           </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="lg:text-lg">Suis-je éligible à la Prime Coup de Pouce Chauffage ?</AccordionTrigger>
+              <AccordionTrigger className="lg:text-lg">Suis-je éligible à la prime Coup de Pouce Chauffage ?</AccordionTrigger>
               <AccordionContent className="text-base">
-                <p>Oui, cette prime est ouverte à tous les foyers français, propriétaires ou locataires, sans condition de revenus. Pour vérifier votre éligibilité, remplissez simplement notre formulaire en ligne.</p>
+                <p>Oui, cette prime est ouverte à tous les foyers français, propriétaires ou locataires, sans condition de revenus. Vous dvez néanmoins un mode de chauffage individuel. Pour vérifier votre éligibilité, remplissez simplement notre formulaire en ligne.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-1">

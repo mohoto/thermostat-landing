@@ -38,16 +38,20 @@ const Navbar = ({}: Props) => {
             <nav className={cn(navSticky ? "fixed top-0 z-50 w-full transition duration-500 ease-in-out shadow-lg bg-white py-2" : "bg-liia-clair py-2")}>
                 <div className="container">
                     <div className="flex items-center justify-between">
-                        <Link href="/">
-                            <Image
-                                src="/images/logo-liia-energies.svg"
-                                alt="Agence Shikam publicité sur les réseaux sociaux"
-                                className="mt-4"
-                                width={120}
-                                height={30}
-                                priority
-                            />
-                        </Link>
+                        <Image
+                            src="/images/logo-liia-energies.svg"
+                            alt="Agence Shikam publicité sur les réseaux sociaux"
+                            className="mt-4"
+                            width={120}
+                            height={30}
+                            priority
+                        />
+                        <Link
+                            href="#test-eligibilite"
+                            className="bg-liia-orange text-white font-semibold py-2 px-4 rounded-sm mt-4"
+                            >
+                                Testez votre éligibilté
+                            </Link>
                     </div>
                 </div>
             </nav>

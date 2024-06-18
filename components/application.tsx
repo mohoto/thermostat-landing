@@ -5,7 +5,7 @@ type Props = {}
 
 function Application({}: Props) {
   return (
-    <section className="py-24">
+    <section className="lg:py-24 py-10">
         <div className="lg:container flex justify-center">
             <div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-16 lg:gap-y-0 items-center">
                 <div className="bg-liia-bleue rounded-xl p-8 lg:max-w-2xl">
