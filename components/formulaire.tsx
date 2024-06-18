@@ -554,7 +554,7 @@ function Formulaire({}: Props) {
                             {(step === 6 && eligible) && (
                                 <div className="lg:h-64 mt-6 flex flex-col justify-between">
                                     <div className="p-4 text-center mt-8">
-                                        <h3 className="text-white lg:text-2xl mb-10 text-lg">Félicitation, vous êtes éligible à la prime <br /><span className="text-liia-orange text-2xl">"COUP DE POUCHE CHAUFFAGE"</span></h3>
+                                        <h3 className="text-white lg:text-2xl mb-10 text-lg">Félicitation, vous êtes éligible à la prime <br /><span className="text-liia-orange text-2xl">"COUP DE POUCE CHAUFFAGE"</span></h3>
                                         <p className="text-white">Un conseiller vous contactera dans les plus brefs délais pour finaliser votre dossier.</p>
                                     </div>
                                     <div className="flex justify-end">
@@ -570,7 +570,7 @@ function Formulaire({}: Props) {
                             {(step === 6 && !eligible) && (
                                 <div className="lg:h-64 mt-6 flex flex-col justify-between">
                                     <div className="p-4 text-center mt-8">
-                                        <h3 className="text-white text-2xl mb-10">Désolé, vous n'êtes pas éligible à la prime <br /><span className="text-liia-orange">"COUP DE POUCHE CHAUFFAGE"</span></h3>
+                                        <h3 className="text-white text-2xl mb-10">Désolé, vous n'êtes pas éligible à la prime <br /><span className="text-liia-orange">"COUP DE POUCE CHAUFFAGE"</span></h3>
                                         <p className="text-white">Cette prime est disponible uniquement pour les logements en chauffage individuel.</p>
                                     </div>
                                     <div className="flex justify-end">
