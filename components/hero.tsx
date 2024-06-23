@@ -10,7 +10,7 @@ type Props = {}
 
 function Hero({}: Props) {
   return (
-    <section className="pt-32 pb-10 lg:px-8 bg-liia-clair 2xl:px-32">
+    <section className="pt-24 pb-10 lg:px-8 bg-liia-clair 2xl:px-32">
       <div className="container">
         <div className="grid lg:grid-cols-2 2xl:grid-cols-7 2xl:gap-x-32 gap-y-12 lg:gap-y-0 lg:place-content-between lg:place-items-center">
             <div className="lg:col-span-1 2xl:col-span-4 order-2 lg:order-1">
