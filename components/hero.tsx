@@ -16,7 +16,8 @@ function Hero({}: Props) {
             <div className="lg:col-span-1 2xl:col-span-4 order-2 lg:order-1">
                 <h1 className="2xl:text-4xl font-bold mb-12 lg:text-3xl text-2xl">Profitez de thermostats connectés gratuits et <span className="text-liia-orange">réduisez vos factures de chauffage !</span></h1>
                 <p className="mb-6 text-lg font-light lg:w-11/12">Installation et fourniture <span className="font-semibold">100% prise en charge par l'Etat</span> grâce à la prime "Coup de pouce pilotage connecté du chauffage pièce par pièce".</p>
-                <p className="mb-12 text-lg lg:first-line:w-10/12 font-semibold bg-[#ffed00] py-1 px-2 rounded-lg text-center">Disponible jusqu’au 31 décembre 2024</p>
+                <p className="mb-12 text-lg lg:first-line:w-10/12 font-semibold text-center lg:text-left lg:hidden bg-[#ffed00] py-1 px-2 rounded-lg">Disponible jusqu’au 31 décembre 2024</p>
+                <p className="mb-12 text-lg lg:first-line:w-10/12 font-semibold text-center lg:text-left hidden lg:block"><span className="bg-[#ffed00] py-1 px-2 rounded-lg">Disponible jusqu’au 31 décembre 2024</span></p>
                 <div className="flex gap-x-4">
                     <Image
                     src={chaudiereImage}
