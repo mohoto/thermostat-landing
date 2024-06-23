@@ -152,7 +152,6 @@ function Formulaire({}: Props) {
                                                                 value="gaz" 
                                                                 id="gaz" 
                                                                 className="peer sr-only" 
-                                                                //checked={typeChauffage === "gaz"}
                                                                 aria-label="gaz"
                                                                 />
                                                                 <Label

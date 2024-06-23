@@ -48,7 +48,7 @@ const Navbar = ({}: Props) => {
                         />
                         <Link
                             href="#test-eligibilite"
-                            className="bg-liia-orange text-white font-semibold py-2 px-4 rounded-sm mt-4"
+                            className="bg-liia-orange text-white font-semibold py-2 px-4 rounded-sm mt-4 text-xs lg:text-base"
                             >
                                 Testez votre éligibilté
                             </Link>
