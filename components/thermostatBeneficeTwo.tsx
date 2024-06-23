@@ -10,7 +10,7 @@ type Props = {}
 
 function ThermostatBeneficeTwo({}: Props) {
   return (
-    <section className="py-20">
+    <section className="lg:py-20 py-10">
         <div className="container">
             <div className="grid lg:grid-cols-2 lg:gap-x-32 gap-y-16 lg:gap-y-0">
                 <div className="flex flex-col gap-y-8">

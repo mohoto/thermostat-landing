@@ -10,7 +10,7 @@ type Props = {}
 
 function Etapes({}: Props) {
   return (
-    <section className="py-16">
+    <section className="lg:py-16 py-8">
         <div className="container">
             <h2 className="2xl:text-3xl font-bold mb-10 text-2xl text-center">Comment profiter de thermostats gratuits ?</h2>
             <div className="flex flex-col items-center">

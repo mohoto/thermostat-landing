@@ -6,7 +6,7 @@ type Props = {}
 function Application({}: Props) {
   return (
     <section className="lg:py-24 py-10">
-        <div className="lg:container flex justify-center">
+        <div className="container flex justify-center">
             <div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-16 lg:gap-y-0 items-center">
                 <div className="bg-liia-bleue rounded-xl p-8 lg:max-w-2xl">
                     <h2 className="2xl:text-2xl mb-8 lg:text-xl text-lg font-bold text-white">Une application mobile gratuite pour gérer tous vos radiateurs</h2>
