@@ -21,7 +21,7 @@ function ThermostatBeneficeTwo({}: Props) {
                         </div>
                         <div>
                             <h3 className="!font-semibold mb-2 lg:text-xl text-lg">Des économies d'énergie significatives</h3>
-                            <p className="mb-0">Réduisez vos factures de chauffage de plus de 15% en ajustant la température en fonction de vos besoins réels et des conditions météorologiques.</p>
+                            <p className="mb-0">Réduisez vos factures de chauffage de plus de 25% en ajustant la température en fonction de vos besoins réels et des conditions météorologiques.</p>
                         </div>
                     </div>
                     <div className="flex gap-x-2">

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import heroImage from "@/public/images/thermostat-connecte-2.png"
 import heroImageTwo from "@/public/images/coup-de-pouce-thermostat-blanc.png"
-import heroImageThree from "@/public/images/thermostat-connecte-economie.png"
+import heroImageThree from "@/public/images/thermostat-connecte-economie-2.png"
 import chaudiereImage from "@/public/images/thremostats-chaudiere-gaz-fioul.png"
 import pacImage from "@/public/images/thremostats-pompe-a-chaleur.png"
 import elecImage from "@/public/images/thremostats-radiateur-electrique.png"
@@ -68,7 +68,7 @@ function Hero({}: Props) {
                     <div className="absolute -bottom-10 -left-10">
                         <Image
                         src={heroImageThree}
-                        alt="15% d'économie sur vos factures de chauffage"
+                        alt="25% d'économie sur vos factures de chauffage"
                         className="rounded-full shadow-lg"
                         width={140}
                         height={140}
