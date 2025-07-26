@@ -39,7 +39,7 @@ const Navbar = ({}: Props) => {
                 <div className="container">
                     <div className="flex items-center justify-between">
                         <Image
-                            src="/images/logo-liia-energies.svg"
+                            src="/images/next-renov-logo.svg"
                             alt="Agence Shikam publicité sur les réseaux sociaux"
                             className="mt-4"
                             width={120}
